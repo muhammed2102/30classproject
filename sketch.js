@@ -1,3 +1,4 @@
+
 const Engine = Matter.Engine;
 const World= Matter.World;
 const Bodies = Matter.Bodies;
@@ -74,4 +75,17 @@ function mouseDragged(){
 
 function mouseReleased(){
     slingshot.fly();
+}
+
+function keyPressed(){
+
+        //when space is pressed
+    if(keyCode === 32){
+        //we need to put the bird back to sling
+        //Y----------------------------------O
+           //call attach funtion in the slingshot class
+           
+           slingshot.attach(bird.body);
+    }
+
 }
